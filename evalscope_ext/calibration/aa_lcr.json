@@ -1,0 +1,509 @@
+{
+ "benchmark": "aa_lcr",
+ "judge_noise": 0.06,
+ "global_difficulty": 0.40667,
+ "n_pool_models": 3,
+ "n_items": 100,
+ "items": {
+  "195db7bba0f255a2d0e6aae292f30c433a654854": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "f1c602ed72d87f2e1a3eecd0b672a706d91170d5": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "1022e6657a8400e807645cc5f32172a9f14b525b": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "3acada21717aab1b8958dbe0396a6b15c4b4d22d": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "249ef0c9ecbc9242c0530dba84a9017b281dc50a": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "1e055c58f348faa589460fc0622c8cbd0eb7a72d": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "dee55b62ba14e9aaef1c078bf505cbb51a097c6c": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "f826ac876b08375ea26606d8503a599b7fa39a9a": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "53f408c82c169c1c4d52981b55c8006c19e06f88": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "50a0e7f8c706d0f3d6cc38b843a296adb4530ca6": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "6a668609b007851742aa02f9cc3eea9471eebf9b": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "b05659a3c3f7f6b36f0084c7b248f548dcc61757": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "c53af3d524d395ca6c6ec51ce283cfcdb0c70fcf": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "67b8c135d062656a1ee9772e4873b3571d9e4f03": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "612030f4988c4297c605baa0cf5ce00c3bca25a6": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "c3cbe0e5c5626de618b4dce951bed378577837a4": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "45c628752fdd751ecb2bb54bdbbe301b44526dc7": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "d0e07af7aa3ee5db098c103485acc6ac054c4662": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "5b2cc3ad24f5f257b11b03225fec7fd57a8202bb": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "d52fb719553200442b2ec156e4a0b441904466f3": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "eb9dbb3993c5a70119e527552b2409000e2c7fa6": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "ea20f2a57db993459b43fe8d1076b72bceeac63d": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "53b053990bd084d9796868c6f615a631cf6cc0a7": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "ab7a799fbfd0264a784e9ea9091765876a22af0e": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "1b4aded14bf16e2801465a607df365a553dffbc5": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "3e946f81ce28eca940471cd0ac7eb66189ed0b3a": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "b674b8f98a39cc8850cd559a4484599da4df1e3e": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "dd2a1cd5b880a4c1ad59715e78f244abc262e365": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "db97370e447de558d910b59e3304d561b25dff4a": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "1254fd28648ad86f7527e4bf032902f4f5721b4f": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "fd4125ac2db2b8c0362b4c1dc49a47819b8fb05b": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "423bc48678587dfad087966adf01d7db5013e288": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "fa6be2f3007c853d9447c81b9859628a4fb4d64a": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "033a31ef56934feafe2a101b3fbf00405caf390b": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "4375d03c41ea4591a3ce6221f7557e0891ecf436": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "81220a5a264d9e4dcd5a96ed0e33d5719fc5fc73": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "8d8f5645311ecfaa4b81b631eaf1d8ebf55c4506": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "14e465383fa25df56d4575cf13bbb816276bfbc9": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "1f58d5b06dd6863acf512abb5576ec8848dae7fe": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "70839926d7326f45535f7b927900ff6907f4e5fb": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "d218c387a7421fbce8ca00c4aa9a4f7c0fd9fb62": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "4d447e882ab27418953dba49a44a264f9e813dd5": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "ffb3d02d9aca37eed61064e29d6c01182173f0f8": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "57c1599c0870fbe8e18eca931b56a06c05ee2f3a": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "69c93f0ec27a25b3ffa60d57df697b7c0879a1c5": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "fb01cdd1608fe7136563701781fb45691f1020a8": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "926491321f0b7f14e97a70a91a96049eec0ea713": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "4acfc1eec33d4d8ff90b6a600c5318964e1ba2e6": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "3b40f1d38c4f57a8ce67ffe2eb746bbc0da61f75": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "d31a36b56c2d8abd3e4e980184c52dd1016f17b4": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "3793c4b74067399303fdff91f705cd58e6a5134d": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "c2a33c7809da963680e94a7e82ebf5fef74dd520": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "8e4a542825fadc35384aa3b2223500de4e150485": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "ca31b663e03caa6919a27bd1999b2b22e2554089": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "7db86301c16c86dc19ed4e9c40ec781f0cc9f33c": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "34b1fb6f3b6dea00e62d150ba61681adf2c8d49f": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "152cfd76d325efc0c6e12709f1831792e156ff1a": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "f263ac93b54f42227f53305cb9c3b5a263de0680": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "4570f5bdb89ed3a8508941158e634a3b3ec2a78e": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "492e925ac5957d6eff5828e2a1cd322305239bca": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "8aca50eee131faa4d9c950bd40c8054df2d43f05": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "799f12cf783eb5b5f3371bb29fdd4fc2f1ef71a6": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "016b3b84f7c5d6fa6533466320585a18bc069ef1": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "e4e0899b007229c610c1a5c6c19824fd594e9ac8": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "62d27080e117b7130373ae0b4e8e7aba110ab121": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "6171b4580ed8490984c6a7c45507a1e2566f5b06": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "cace7b968ed6b20a7f860c9c8b89f48d429feb87": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "c4904121ac258abbdfdcbc8e6d3d9a0e70faf4b3": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "1835c8d063fc5ce59fcc152f4ca582ab3dd2851a": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "72314319e9d8faf91d9aa081a35bc7a1e0e4490b": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "e446ffb3987d4448fe88d838166add7d3bfeeb9b": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "3a0e55d9ca5bd84d0f2a467dc78f7e7eb1dbcac6": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "f5a596f512efa15775103b2c362efd41c900a56e": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "21ed7d2529ff77d0c9a94991465588e14e009b8f": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "45134e9dd5467beea98a590bf8ba2a20a1727411": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "9a38ff279e4730dacc099ead873ab6f7cdd4fd3e": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "6cbda23eb50982b5a55bc4f239633780efc9e0f0": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "4019b833bc271bcc3dd4fc752571a7c1a7a68c99": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "67aeca3e9871185e8085c0f01f3e4a23ed39692d": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "e584858ed2f86b2c54ceb3236b4c7ab91b89ee4f": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "14470394939a89d8d87f99c938434ba48a924cb8": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "fcf2d8dfd8a0acd412f7cebe1bd942ca010bf94b": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "5d24cfe34d39b6b0ddb402d5e078425cc88f0325": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "11f15bc416300774838834365812dae72219a226": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "54a0893ad2585a800eefdc5bec7d33370ef4c63b": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "e441d4711bb56101813a33b1267a94c7cbe9f84a": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "4bc7f53d75b9c59787293acb61c1ec5a550f7b31": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "c74e2ec1a1d853452101441ad755c2f81db67a02": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "674eb30999a62ceb56a7aaff34ef329bda066d62": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "f557085fadd1ba6cc6499588d6aa983cf9c2e52c": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "2dc59297f2ce4d734742d5842999152a2421d4aa": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "84edbf59c7fc915b89785babc598000f5170191f": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "6967b612987c249ae327a49a235eca4ae20472d2": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "5ce31316bd411209fadc4a5ab8d951af5e25a8e7": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "db6be1b771e2f2870f05e576a1be156a9bc40fb2": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "d3554eb385218ba7ecdc1e46bb5a362b6b92d003": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "e462cca4a3bdd6ac4f89bf6e847e15d0a270dbaa": {
+   "difficulty": 0.18404,
+   "discrimination": 0.0,
+   "n_obs": 3
+  },
+  "9dbd53827bae2c886c43a0bd76728045250e34ab": {
+   "difficulty": 0.36652,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "19b4febdeb027724431055b827ebc5bfc578c3d7": {
+   "difficulty": 0.549,
+   "discrimination": 0.82889,
+   "n_obs": 3
+  },
+  "7afd5bcfaa2673f1399105c6ec03c0c649ce0229": {
+   "difficulty": 0.73148,
+   "discrimination": 0.0,
+   "n_obs": 3
+  }
+ }
+}

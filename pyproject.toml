@@ -34,11 +34,14 @@ include-package-data = true
 
 [tool.setuptools.package-data]
 "evalscope.web" = ["dist/**/*"]
+# evalscope_ext: ship the precomputed difficulty/discrimination calibration priors
+"evalscope_ext" = ["calibration/*.json", "docs/*"]
 
 [tool.setuptools.packages.find]
 where = ["."]
+# the "evalscope*" glob also matches the bundled "evalscope_ext" pruning extension
 include = ["evalscope*"]
-exclude = ["evalscope.web.node_modules*", "evalscope.web.src*"]
+exclude = ["evalscope.web.node_modules*", "evalscope.web.src*", "evalscope_ext.tests*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "evalscope.version.__version__"}
