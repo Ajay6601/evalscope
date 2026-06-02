@@ -1,9 +1,9 @@
-# Handout A — Why this works (technical)
+# Handout A - Why this works (technical)
 
 ## The problem I actually solved
 
-Not "find the easiest/representative N items." The customer asks one question —
-*is this model good enough for our workload?* — so the real target is a **decision
+Not "find the easiest/representative N items." The customer asks one question -
+*is this model good enough for our workload?* - so the real target is a **decision
 estimator**: a small subset whose accuracy (a) is an unbiased, low-variance
 estimate of the full-benchmark accuracy, (b) lands on the same side of a go/no-go
 threshold as the full run, and (c) does both for **a model we have not seen**.
@@ -27,7 +27,7 @@ I treat each item as having a latent difficulty (IRT-style) and a discrimination
 
 The difficulty/discrimination prior is computed **once, offline** from historical
 reviews (`tools/calibrate.py`) with Beta-Binomial shrinkage. It is a prior over
-items, not the candidate's scores — the online pruner never sees the model under
+items, not the candidate's scores - the online pruner never sees the model under
 test. Items that fail to join the prior fall back to neutral, so a stale
 calibration degrades gracefully.
 
@@ -44,16 +44,16 @@ No leakage. (40 seeds × 3 held-out models; full table in `analysis/results/`.)
 | AA-LCR | 20% (20/100) | 0.073 | 0.074 | 0.360 | 0.16 → 0.12 |
 
 **Coding:** keep ~15–20% and recover full accuracy to ±4 pts with ~half the
-decision-flip rate of random — a genuine, defensible cut. The forbidden
+decision-flip rate of random - a genuine, defensible cut. The forbidden
 top-k-hardest baseline is off by 35–43 pts (it keeps only items everyone fails,
 so it measures nothing about a good model), which is exactly why it's forbidden
 and why a difficulty-*balanced* (not difficulty-*ranked*) selection is the point.
 
 **Long-context, honestly:** within AA-LCR the cheap intrinsic axes barely move
-accuracy (|corr(context-length, accuracy)| < 0.13 — the contexts are *all* long,
+accuracy (|corr(context-length, accuracy)| < 0.13 - the contexts are *all* long,
 71k–115k tokens) and the LLM judge injects per-label noise, so the full 100-item
 score itself has a binomial standard error of ~0.05. No selector can beat that
-floor on the *mean*, and my numbers say so — the coreset ties random there rather
+floor on the *mean*, and my numbers say so - the coreset ties random there rather
 than pretending to win. Its value on AA-LCR is (i) lower tail error (p90), (ii)
 judge-noise-aware difficulty so we don't chase flipped labels, and (iii)
 guaranteed coverage of the genuinely harder `count` questions and the longest
@@ -61,18 +61,18 @@ contexts that a random draw of 10 can easily miss. The actionable finding: a
 *borderline* long-context call needs ~20–30% of AA-LCR **or** a denoised judge
 (repeated/ensemble judging) before the go/no-go is trustworthy.
 
-## Part B — probing the image encoder specifically
+## Part B - probing the image encoder specifically
 
 If multimodal lands next quarter, the failure we must catch is **encoder
-degradation** — a model served at fp8/int4, lower input resolution, or with a
-smaller vision tower — *not* generic reasoning. An encoder loses information
+degradation** - a model served at fp8/int4, lower input resolution, or with a
+smaller vision tower - *not* generic reasoning. An encoder loses information
 first on high-spatial-frequency, small, low-contrast, multi-panel content. So the
 probe selects MMMU items that are simultaneously (a) visually fragile and (b)
 unanswerable without truly seeing the image.
 
 **Selection** (`encoder_stress`, runs over the full ~12k): score each item on
-intrinsic, model-free image features — Laplacian high-frequency energy, edge
-density, smallest side, aspect extremity, color entropy, image count — plus an
+intrinsic, model-free image features - Laplacian high-frequency energy, edge
+density, smallest side, aspect extremity, color entropy, image count - plus an
 `img_type` prior (tables/charts/diagrams/sheet-music/medical = high stress;
 natural photos = low). Return a **subject-balanced high-stress probe** and a
 **subject-matched low-stress control**. Balancing across subjects/subfields stops
@@ -81,16 +81,16 @@ us from accidentally measuring a domain gap.
 **Measurement through the standard OpenAI image+text interface** (we can't open
 the encoder, so we build controlled contrasts at the API):
 
-1. **Vision-necessity filter** — run each candidate item with the image removed
+1. **Vision-necessity filter** - run each candidate item with the image removed
    (or replaced by a neutral placeholder). Keep items the model *can't* answer
    blind. This guarantees the probe scores perception, not text priors / option
    leakage.
-2. **Perturbation ladder** — re-ask each probe item under encoder-attacking
+2. **Perturbation ladder** - re-ask each probe item under encoder-attacking
    degradations: downscale→upscale, JPEG, mild blur, color quantization. A
    faithful encoder is robust; a degraded one collapses. The **accuracy-vs-
    perturbation slope** is the headline encoder-fidelity number, and reasoning
    strength cannot fake robustness to resolution loss.
-3. **Probe − control differential** — strong on control, weak on probe ⇒ encoder
+3. **Probe − control differential** - strong on control, weak on probe ⇒ encoder
    problem; weak on both ⇒ general capability gap. Random sampling cannot make
    this separation.
 
@@ -108,9 +108,9 @@ the encoder, so we build controlled contrasts at the API):
 ## What I'd change with more of each
 
 - **More data (more pool models):** fit a real 2-parameter IRT model for sharper,
-  better-resolved difficulty/discrimination — the current prior is deliberately
+  better-resolved difficulty/discrimination - the current prior is deliberately
   shrunk because a 3-model pool is thin. This would most help AA-LCR.
-- **A live endpoint:** make the prior *active* — query the candidate on a tiny
+- **A live endpoint:** make the prior *active* - query the candidate on a tiny
   seed set, locate it on the difficulty curve, and adaptively spend the remaining
   budget where this model is uncertain (CAT-style). For Part B, actually run the
   vision-necessity filter and perturbation ladder instead of describing them.
