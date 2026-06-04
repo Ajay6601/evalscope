@@ -1,14 +1,13 @@
-"""``stratified_coreset`` -- the Part A pruning strategy.
+"""stratified_coreset - the Part A strategy.
 
-The algorithm lives in :mod:`coreset`; this class adapts it to evalscope's
-``Sample`` objects.  Benchmark-specific glue (how to turn a sample into intrinsic
-features, and how to join a sample to its calibration row) is injected by the
-pruned *adapter* through :meth:`configure`, so the same algorithm serves coding,
-long-context, or any future benchmark without edits here.
+Works on any benchmark: it pulls a few cheap, generic features off each Sample
+(prompt length, #choices, #images) and reads an optional difficulty prior. The
+real selection logic lives in coreset.py.
 """
 from __future__ import annotations
 
-from typing import Callable, List, Optional, Sequence
+import math
+from typing import List, Optional, Sequence
 
 import numpy as np
 
@@ -17,73 +16,68 @@ from .calibration import CalibrationTable
 from .coreset import select_coreset
 
 
+def _sample_features(sample) -> List[float]:
+    """Generic, model-free features that exist for basically any benchmark."""
+    text_len, n_img = 0, 0
+    msgs = sample.input if isinstance(sample.input, list) else [sample.input]
+    for m in msgs:
+        c = getattr(m, 'content', m)
+        if isinstance(c, str):
+            text_len += len(c)
+        elif isinstance(c, list):
+            for part in c:
+                if getattr(part, 'type', None) == 'image':
+                    n_img += 1
+                else:
+                    text_len += len(getattr(part, 'text', '') or '')
+    # input_tokens shows up in some benchmarks' metadata (e.g. long-context); use it if there
+    tok = (getattr(sample, 'metadata', {}) or {}).get('input_tokens')
+    return [
+        math.log1p(text_len),
+        float(len(sample.choices or [])) if getattr(sample, 'choices', None) else 0.0,
+        float(n_img),
+        math.log1p(tok) if isinstance(tok, (int, float)) else 0.0,
+    ]
+
+
 @register_pruner('stratified_coreset')
 class StratifiedCoresetPruner(PruningStrategy):
-    """Stratified discriminative coreset (see :func:`coreset.select_coreset`).
+    """Knobs (via extra_params): alpha, n_difficulty_bins, n_content_bins, floor."""
 
-    Tunables (via ``--dataset-args`` ``extra_params``):
-        alpha:              discrimination vs coverage blend in [0,1] (default 0.5)
-        n_difficulty_bins:  fixed-width difficulty strata (default 4)
-        n_content_bins:     content sub-strata when budget allows (default 3)
-        floor:              minimum picks per occupied stratum (default 1)
-    """
-
-    def __init__(self, prune_ratio: float = 0.1, seed: int = 0,
-                 alpha: float = 0.5, n_difficulty_bins: int = 4,
-                 n_content_bins: int = 3, floor: int = 1, **kwargs):
+    def __init__(self, prune_ratio=0.1, seed=0, alpha=0.5,
+                 n_difficulty_bins=4, n_content_bins=3, floor=1, **kwargs):
         super().__init__(prune_ratio=prune_ratio, seed=seed, **kwargs)
         self.alpha = float(alpha)
         self.n_difficulty_bins = int(n_difficulty_bins)
         self.n_content_bins = int(n_content_bins)
         self.floor = int(floor)
-        # injected by the adapter
-        self._feature_fn: Optional[Callable] = None
-        self._key_fn: Optional[Callable] = None
-        self._calibration: Optional[CalibrationTable] = None
-
-    def configure(self, *, feature_fn: Callable, key_fn: Callable,
-                  calibration: Optional[CalibrationTable]) -> 'StratifiedCoresetPruner':
-        """Inject benchmark-specific feature/key extractors and the prior."""
-        self._feature_fn = feature_fn
-        self._key_fn = key_fn
-        self._calibration = calibration
-        return self
+        self.calibration: Optional[CalibrationTable] = None  # set by the adapter
 
     def prune(self, samples: Sequence, subset: str) -> PruneResult:
-        if self._feature_fn is None or self._key_fn is None:
-            raise RuntimeError('StratifiedCoresetPruner.configure() must be called first')
         n = len(samples)
         if n == 0:
             return PruneResult(keep_indices=[])
 
-        feats: List[List[float]] = []
-        difficulty = np.empty(n)
-        discrimination = np.empty(n)
+        feats = np.array([_sample_features(s) for s in samples], dtype=float)
+        difficulty = np.full(n, 0.5)
+        discrimination = np.full(n, 0.5)
         joined = 0
-        for i, s in enumerate(samples):
-            feats.append(list(self._feature_fn(s)))
-            if self._calibration is not None:
-                d, disc, n_obs = self._calibration.get(self._key_fn(s, i))
-                joined += int(n_obs > 0)
-            else:
-                d, disc = 0.5, 0.5
-            difficulty[i] = d
-            discrimination[i] = disc
+        if self.calibration is not None:
+            for i in range(n):
+                d, disc, n_obs = self.calibration.get(str(i))  # positional join
+                difficulty[i], discrimination[i] = d, disc
+                joined += n_obs > 0
 
-        features = np.array(feats, dtype=float)
-        keep, stratum_of, stratum_weight = select_coreset(
-            features, difficulty, discrimination, self.prune_ratio,
+        keep, bin_of, bin_w = select_coreset(
+            feats, difficulty, discrimination, self.prune_ratio,
             n_difficulty_bins=self.n_difficulty_bins,
             n_content_bins=self.n_content_bins,
             alpha=self.alpha, floor=self.floor, seed=self.seed,
         )
         return PruneResult(
             keep_indices=keep,
-            stratum_of={i: stratum_of[i] for i in keep},
-            stratum_weight=stratum_weight,
-            diagnostics={
-                'n_full': n, 'n_kept': len(keep),
-                'calibration_join_rate': round(joined / n, 3),
-                'subset': subset,
-            },
+            bin_of={i: bin_of[i] for i in keep},
+            bin_weight=bin_w,
+            info={'n_full': n, 'n_kept': len(keep), 'subset': subset,
+                  'calibration_join_rate': round(joined / n, 3)},
         )

@@ -1,9 +1,8 @@
 {
- "benchmark": "live_code_bench_v5",
+ "benchmark": "live_code_bench",
  "judge_noise": 0.0,
- "global_difficulty": 0.3291,
- "n_pool_models": 3,
  "n_items": 315,
+ "global_difficulty": 0.3291,
  "items": {
   "0": {
    "difficulty": 0.13164,

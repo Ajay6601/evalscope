@@ -1,14 +1,9 @@
-"""Pruning-strategy extension point for evalscope.
+"""Pruning strategy base class + a small registry, in the same spirit as
+evalscope's own register_benchmark / register_metric.
 
-A *pruning strategy* takes the fully-loaded list of evaluation ``Sample`` objects
-for one subset and returns the subset of sample indices to keep.  This mirrors
-evalscope's own ``register_benchmark`` / ``register_metric`` registries so that a
-maintainer reading the code finds a familiar pattern.
-
-Strategies are intentionally model-agnostic: they receive the dataset and a
-*difficulty prior* (a calibration artifact computed once, offline, from historical
-runs), never the candidate model's scores.  This is what makes a pruned set
-defensible for a model we have not seen.
+A strategy takes the loaded samples for one subset and returns which ones to
+keep. It only gets the items and an offline difficulty prior, never the model's
+answers, so the choice stays fair for a model we haven't tested.
 """
 from __future__ import annotations
 
@@ -16,40 +11,24 @@ import abc
 from dataclasses import dataclass, field
 from typing import Callable, Dict, List, Sequence
 
-# Imported lazily inside type-checking only blocks to avoid a hard evalscope
-# dependency when the pruning algorithms are unit-tested in isolation.
-try:  # pragma: no cover - exercised indirectly
+try:
     from evalscope.api.dataset import Sample
-except Exception:  # pragma: no cover
+except Exception:  # lets the numpy core be used without evalscope installed
     Sample = object  # type: ignore
 
 
 @dataclass
 class PruneResult:
-    """Outcome of a pruning pass for a single subset."""
-
     keep_indices: List[int]
-    """Positions (into the input sample list) to retain, in stable order."""
-
-    stratum_of: Dict[int, str] = field(default_factory=dict)
-    """Map kept position -> stratum label, for diagnostics / reweighting."""
-
-    stratum_weight: Dict[str, float] = field(default_factory=dict)
-    """Full-set frequency of each stratum (sum to 1). Lets a downstream
-    estimator reweight to stay unbiased even under non-proportional allocation."""
-
-    diagnostics: Dict[str, object] = field(default_factory=dict)
+    bin_of: Dict[int, str] = field(default_factory=dict)        # kept index -> bin/role label
+    bin_weight: Dict[str, float] = field(default_factory=dict)  # bin -> share of full set
+    info: Dict[str, object] = field(default_factory=dict)
 
 
 class PruningStrategy(abc.ABC):
-    """Base class for all sample-pruning strategies.
+    """Base class. Construction kwargs come from the benchmark extra_params, so a
+    strategy can expose its own knobs (alpha, bins, ...)."""
 
-    Subclasses implement :meth:`prune`.  Construction kwargs come straight from
-    the benchmark ``extra_params`` (i.e. from ``--dataset-args``), so a strategy
-    may expose tunables such as ``alpha`` or ``n_difficulty_bins``.
-    """
-
-    #: Registry name; set by :func:`register_pruner`.
     name: str = ''
 
     def __init__(self, prune_ratio: float = 0.1, seed: int = 0, **kwargs):
@@ -61,20 +40,14 @@ class PruningStrategy(abc.ABC):
 
     @abc.abstractmethod
     def prune(self, samples: Sequence['Sample'], subset: str) -> PruneResult:
-        """Return the indices of ``samples`` to keep for ``subset``."""
-        raise NotImplementedError
+        ...
 
 
-# --------------------------------------------------------------------------- #
-# Registry
-# --------------------------------------------------------------------------- #
 PRUNER_REGISTRY: Dict[str, type] = {}
 
 
 def register_pruner(name: str) -> Callable[[type], type]:
-    """Class decorator registering a :class:`PruningStrategy` under ``name``."""
-
-    def _wrap(cls: type) -> type:
+    def wrap(cls: type) -> type:
         if not issubclass(cls, PruningStrategy):
             raise TypeError(f'{cls!r} is not a PruningStrategy')
         if name in PRUNER_REGISTRY and PRUNER_REGISTRY[name] is not cls:
@@ -82,16 +55,12 @@ def register_pruner(name: str) -> Callable[[type], type]:
         cls.name = name
         PRUNER_REGISTRY[name] = cls
         return cls
-
-    return _wrap
+    return wrap
 
 
 def get_pruner(name: str, **kwargs) -> PruningStrategy:
-    """Instantiate a registered pruning strategy."""
     if name not in PRUNER_REGISTRY:
-        raise KeyError(
-            f'unknown pruning_strategy {name!r}; registered: {sorted(PRUNER_REGISTRY)}'
-        )
+        raise KeyError(f'unknown pruning_strategy {name!r}; have {sorted(PRUNER_REGISTRY)}')
     return PRUNER_REGISTRY[name](**kwargs)
 
 

@@ -1,4 +1,4 @@
-# Handout A: Why this works (for an engineer)
+# Handout A: Why this works
 
 ## What I was actually trying to do
 
@@ -78,16 +78,21 @@ aspect ratios, color complexity, number of images, plus a prior on image type
 low). It returns a high-stress set and a matched easy "control" set.
 
 We can't open up the encoder, so we measure it through the normal image+text API in
-three ways:
+three ways, and the first two are shipped as code on the pruned adapter, not just
+described:
 
-1. Drop the image and ask anyway. Keep only the questions the model can't answer
-   blind, so we know we're testing seeing and not guessing.
-2. Damage the image on purpose (shrink-then-grow, JPEG, blur, fewer colors) and
-   watch how fast accuracy drops. A good encoder barely notices; a degraded one
-   falls off a cliff. Being smart can't fake this.
+1. Drop the image and ask anyway (`drop_images`). Keep only the questions the model
+   can't answer blind, so we know we're testing seeing and not guessing.
+2. Damage the image on purpose and re-ask (`perturb_level`, the ladder in
+   `image_ops.py`: shrink-then-grow, JPEG, blur, fewer colors). Watch how fast
+   accuracy drops between level 0 and level 2. A good encoder barely notices; a
+   degraded one falls off a cliff. Being smart can't fake this.
 3. Compare the hard set against the easy control. Fine on control but bad on hard
    means an encoder problem. Bad on both means the model just isn't good. Random
    sampling can't tell those two apart.
+
+So running the probe is just: run `mmmu_pruned` at `perturb_level` 0 and 2 and look
+at the gap, then compare the probe half against the control half.
 
 ## Assumptions
 
@@ -104,8 +109,8 @@ three ways:
 - **More models in the pool:** fit a proper item-response model for sharper
   difficulty. This would help long-context the most.
 - **A live model to query:** probe it on a tiny warm-up set first, find where it's
-  shaky, and spend the budget there. And for images, actually run the damage tests
-  instead of just describing them.
+  shaky, and spend the budget there. The image damage/blind runs already work; with
+  a live endpoint I'd wire up the level-0-vs-level-2 sweep into one command.
 - **More time:** grade the long-context answers a few times to kill the judge
   noise; add the reweighted estimator for a bit more precision; and learn the
   image-type stress prior from real low-precision vs full-precision gaps instead of

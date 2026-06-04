@@ -6,7 +6,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from evalscope_ext.pruning.calibration import beta_binomial_mean, compute_item_stats
+from evalscope_ext.pruning.calibration import beta_binomial_mean, item_stats
 from evalscope_ext.pruning.coreset import select_coreset
 
 
@@ -66,8 +66,8 @@ def test_beats_random_when_difficulty_predicts_label():
 
 def test_judge_noise_increases_shrinkage():
     """Higher judge noise -> difficulty pulled harder toward the global mean."""
-    clean = compute_item_stats({'a': 1, 'b': 1, 'c': 1}, global_pass=0.5, judge_noise=0.0)
-    noisy = compute_item_stats({'a': 1, 'b': 1, 'c': 1}, global_pass=0.5, judge_noise=0.5)
+    clean = item_stats({'a': 1, 'b': 1, 'c': 1}, global_pass=0.5, judge_noise=0.0)
+    noisy = item_stats({'a': 1, 'b': 1, 'c': 1}, global_pass=0.5, judge_noise=0.5)
     # all-correct item -> low difficulty; noise should make it *less* extreme
     assert noisy['difficulty'] > clean['difficulty']
     # discrimination of a unanimous item is ~0 and noise can only reduce it

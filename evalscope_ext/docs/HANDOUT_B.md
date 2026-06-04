@@ -2,7 +2,7 @@
 
 For developers, test engineers, product, and the customer team.
 
-## What it changes for customer conversations
+## What it changes for customer perspective
 
 Right now, telling a prospect "yes, this model is good enough" means running the
 whole coding and long-context test suite on every model we're considering. It's
