@@ -112,10 +112,3 @@ python -m evalscope_ext eval --model <m> --datasets mmmu_pruned \
 The online pruner reads that prior and **never sees the candidate model's
 scores**. Items that don't join fall back to a neutral prior, so a stale or
 partial calibration degrades gracefully instead of breaking.
-
-## Tests
-
-`../tests/test_integration.py` reconstructs samples from the shipped data,
-instantiates each pruned adapter through `get_benchmark`, and exercises the
-pruning hook (feature extraction, calibration join, selection, dataset
-replacement) with no network or model calls.
