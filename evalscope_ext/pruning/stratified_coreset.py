@@ -42,12 +42,11 @@ def _sample_features(sample) -> List[float]:
 
 @register_pruner('stratified_coreset')
 class StratifiedCoresetPruner(PruningStrategy):
-    """Knobs (via extra_params): alpha, n_difficulty_bins, n_content_bins, floor."""
+    """Knobs (via extra_params): n_difficulty_bins, n_content_bins, floor."""
 
-    def __init__(self, prune_ratio=0.1, seed=0, alpha=0.5,
+    def __init__(self, prune_ratio=0.1, seed=0,
                  n_difficulty_bins=4, n_content_bins=3, floor=1, **kwargs):
         super().__init__(prune_ratio=prune_ratio, seed=seed, **kwargs)
-        self.alpha = float(alpha)
         self.n_difficulty_bins = int(n_difficulty_bins)
         self.n_content_bins = int(n_content_bins)
         self.floor = int(floor)
@@ -60,24 +59,21 @@ class StratifiedCoresetPruner(PruningStrategy):
 
         feats = np.array([_sample_features(s) for s in samples], dtype=float)
         difficulty = np.full(n, 0.5)
-        discrimination = np.full(n, 0.5)
         joined = 0
         if self.calibration is not None:
             for i in range(n):
-                d, disc, n_obs = self.calibration.get(str(i))  # positional join
-                difficulty[i], discrimination[i] = d, disc
+                d, n_obs = self.calibration.get(str(i))  # positional join
+                difficulty[i] = d
                 joined += n_obs > 0
 
-        keep, bin_of, bin_w = select_coreset(
-            feats, difficulty, discrimination, self.prune_ratio,
+        keep, bin_of = select_coreset(
+            feats, difficulty, self.prune_ratio,
             n_difficulty_bins=self.n_difficulty_bins,
-            n_content_bins=self.n_content_bins,
-            alpha=self.alpha, floor=self.floor, seed=self.seed,
+            n_content_bins=self.n_content_bins, floor=self.floor,
         )
         return PruneResult(
             keep_indices=keep,
             bin_of={i: bin_of[i] for i in keep},
-            bin_weight=bin_w,
             info={'n_full': n, 'n_kept': len(keep), 'subset': subset,
                   'calibration_join_rate': round(joined / n, 3)},
         )

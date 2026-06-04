@@ -24,25 +24,18 @@ def beta_binomial_mean(correct: float, n: float, prior_mean: float, prior_streng
 
 
 def item_stats(correct_by_model: Dict[str, int], *, global_pass: float, judge_noise: float) -> Dict[str, float]:
-    """Difficulty + discrimination for one item from the pool's 0/1 outcomes.
+    """Difficulty for one item from the pool's 0/1 outcomes.
 
     judge_noise is the grader's per-label flip rate (0 for an exact grader, >0 for
-    an LLM judge). More noise -> stronger prior (more smoothing) and we subtract
-    that noise from the cross-model variance so jitter doesn't look like signal.
+    an LLM judge). More noise -> stronger prior -> more smoothing, so a single
+    flaky grade can't make an item look spuriously hard or easy.
     """
     outcomes = list(correct_by_model.values())
     m = max(len(outcomes), 1)
     correct = float(sum(outcomes))
     prior_strength = 2.0 + 8.0 * judge_noise
     pass_rate = beta_binomial_mean(correct, m, global_pass, prior_strength)
-
-    p = correct / m
-    var = max(0.0, p * (1 - p) - judge_noise * 0.25)
-    return {
-        'difficulty': round(1.0 - pass_rate, 5),
-        'discrimination': round(min(1.0, var / 0.25), 5),
-        'n_obs': m,
-    }
+    return {'difficulty': round(1.0 - pass_rate, 5), 'n_obs': m}
 
 
 @dataclass
@@ -50,15 +43,15 @@ class CalibrationTable:
     benchmark: str
     items: Dict[str, Dict[str, float]]
     neutral_difficulty: float = 0.5
-    neutral_discrimination: float = 0.5
 
     @classmethod
     def load(cls, path: Path | str) -> 'CalibrationTable':
         d = json.loads(Path(path).read_text(encoding='utf-8'))
         return cls(benchmark=d.get('benchmark', '?'), items=d['items'])
 
-    def get(self, key: str) -> Tuple[float, float, int]:
+    def get(self, key: str) -> Tuple[float, int]:
+        """Return (difficulty, n_obs); unknown keys get the neutral prior."""
         row = self.items.get(key)
         if row is None:
-            return self.neutral_difficulty, self.neutral_discrimination, 0
-        return float(row['difficulty']), float(row['discrimination']), int(row.get('n_obs', 0))
+            return self.neutral_difficulty, 0
+        return float(row['difficulty']), int(row.get('n_obs', 0))

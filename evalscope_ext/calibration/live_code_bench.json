@@ -6,1577 +6,1262 @@
  "items": {
   "0": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "1": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "2": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "3": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "4": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "5": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "6": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "7": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "8": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "9": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "10": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "11": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "12": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "13": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "14": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "15": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "16": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "17": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "18": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "19": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "20": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "21": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "22": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "23": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "24": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "25": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "26": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "27": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "28": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "29": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "30": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "31": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "32": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "33": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "34": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "35": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "36": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "37": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "38": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "39": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "40": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "41": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "42": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "43": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "44": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "45": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "46": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "47": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "48": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "49": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "50": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "51": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "52": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "53": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "54": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "55": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "56": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "57": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "58": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "59": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "60": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "61": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "62": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "63": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "64": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "65": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "66": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "67": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "68": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "69": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "70": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "71": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "72": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "73": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "74": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "75": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "76": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "77": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "78": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "79": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "80": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "81": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "82": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "83": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "84": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "85": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "86": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "87": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "88": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "89": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "90": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "91": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "92": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "93": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "94": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "95": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "96": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "97": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "98": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "99": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "100": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "101": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "102": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "103": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "104": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "105": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "106": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "107": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "108": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "109": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "110": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "111": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "112": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "113": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "114": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "115": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "116": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "117": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "118": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "119": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "120": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "121": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "122": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "123": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "124": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "125": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "126": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "127": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "128": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "129": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "130": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "131": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "132": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "133": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "134": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "135": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "136": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "137": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "138": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "139": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "140": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "141": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "142": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "143": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "144": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "145": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "146": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "147": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "148": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "149": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "150": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "151": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "152": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "153": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "154": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "155": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "156": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "157": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "158": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "159": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "160": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "161": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "162": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "163": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "164": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "165": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "166": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "167": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "168": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "169": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "170": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "171": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "172": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "173": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "174": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "175": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "176": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "177": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "178": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "179": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "180": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "181": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "182": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "183": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "184": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "185": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "186": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "187": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "188": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "189": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "190": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "191": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "192": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "193": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "194": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "195": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "196": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "197": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "198": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "199": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "200": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "201": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "202": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "203": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "204": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "205": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "206": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "207": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "208": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "209": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "210": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "211": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "212": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "213": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "214": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "215": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "216": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "217": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "218": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "219": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "220": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "221": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "222": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "223": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "224": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "225": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "226": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "227": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "228": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "229": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "230": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "231": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "232": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "233": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "234": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "235": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "236": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "237": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "238": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "239": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "240": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "241": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "242": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "243": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "244": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "245": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "246": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "247": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "248": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "249": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "250": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "251": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "252": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "253": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "254": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "255": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "256": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "257": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "258": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "259": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "260": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "261": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "262": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "263": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "264": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "265": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "266": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "267": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "268": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "269": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "270": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "271": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "272": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "273": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "274": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "275": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "276": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "277": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "278": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "279": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "280": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "281": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "282": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "283": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "284": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "285": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "286": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "287": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "288": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "289": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "290": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "291": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "292": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "293": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "294": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "295": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "296": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "297": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "298": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "299": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "300": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "301": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "302": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "303": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "304": {
    "difficulty": 0.73164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "305": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "306": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "307": {
    "difficulty": 0.33164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "308": {
    "difficulty": 0.53164,
-   "discrimination": 0.88889,
    "n_obs": 3
   },
   "309": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "310": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "311": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "312": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "313": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "314": {
    "difficulty": 0.13164,
-   "discrimination": 0.0,
    "n_obs": 3
   }
  }

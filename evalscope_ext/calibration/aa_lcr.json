@@ -6,502 +6,402 @@
  "items": {
   "71": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "57": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "58": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "1": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "61": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "91": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "11": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "37": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "27": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "26": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "87": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "66": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "0": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "24": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "99": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "81": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "41": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "20": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "97": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "56": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "93": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "84": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "28": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "34": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "44": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "90": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "15": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "29": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "35": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "82": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "94": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "47": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "73": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "83": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "39": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "46": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "21": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "86": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "4": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "14": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "7": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "77": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "89": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "5": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "45": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "79": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "49": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "92": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "75": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "63": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "16": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "18": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "52": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "60": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "62": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "69": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "13": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "54": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "85": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "10": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "25": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "95": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "36": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "51": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "9": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "30": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "59": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "98": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "78": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "55": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "2": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "43": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "17": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "67": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "72": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "96": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "65": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "31": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "32": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "33": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "70": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "88": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "19": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "23": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "68": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "74": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "64": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "76": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "42": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "50": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "40": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "22": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "38": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "12": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "8": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "80": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "3": {
    "difficulty": 0.18404,
-   "discrimination": 0.0,
    "n_obs": 3
   },
   "6": {
    "difficulty": 0.36652,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "53": {
    "difficulty": 0.549,
-   "discrimination": 0.82889,
    "n_obs": 3
   },
   "48": {
    "difficulty": 0.73148,
-   "discrimination": 0.0,
    "n_obs": 3
   }
  }

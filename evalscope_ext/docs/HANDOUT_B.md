@@ -7,11 +7,11 @@ For developers, test engineers, product, and the customer team.
 Right now, telling a prospect "yes, this model is good enough" means running the
 whole coding and long-context test suite on every model we're considering. It's
 slow and expensive, so it happens late. These pruners let us get the same answer
-from about 15-20% of the work. On coding we land within about 4 points of the full
-score and, more importantly, we usually reach the same yes/no decision, with about
-half the mistakes you'd get from just testing random questions. In practice: a call
-that used to need an overnight run can happen in the meeting, and we can check
-several models in the time one used to take.
+from about 20% of the work. On coding we land within a couple of points of the full
+score and, more importantly, we reached the **same yes/no decision every time** in
+testing, where just sampling random questions got the call wrong ~1 in 10. In
+practice: a call that used to need an overnight run can happen in the meeting, and
+we can check several models in the time one used to take.
 
 It also keeps us honest. For long-context, the tool tells us when the cheap test
 isn't trustworthy (the grader is noisy and the questions don't separate models

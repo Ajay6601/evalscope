@@ -43,25 +43,32 @@ I tested this the honest way: hold one model out, build the difficulty file from
 the other two only, then check how well the kept set predicts the held-out model's
 real score. No peeking at the model being predicted.
 
-| Benchmark | Keep | Coreset error | Random error | "Hardest-only" error | Wrong go/no-go calls (ours vs random) |
-|---|--:|--:|--:|--:|--:|
-| LiveCodeBench v5 | 15% (47/315) | **0.038** | 0.047 | 0.430 | 0.04 vs 0.09 |
-| LiveCodeBench v5 | 20% (63/315) | **0.038** | 0.046 | 0.396 | 0.03 vs 0.08 |
-| AA-LCR | 20% (20/100) | 0.073 | 0.074 | 0.360 | 0.16 vs 0.12 |
+The coreset is deterministic, so its error is over the 3 held-out models; random is
+averaged over 40 draws. "Wrong call" = lands on the other side of a go/no-go line.
 
-For coding, keeping 15-20% gets within about 4 points of the true score and roughly
-halves the rate of wrong yes/no calls compared to random. The banned "keep the
-hardest" trick is off by 35-43 points, which is exactly why it's banned: it only
-keeps questions everyone fails, so it tells you nothing about a good model.
+| Benchmark | Keep | Coreset error | Random error (mean / p90) | "Hardest-only" error | Wrong go/no-go calls (ours vs random) |
+|---|--:|--:|--:|--:|--:|
+| LiveCodeBench v5 | 15% (47/315) | 0.053 | 0.047 / 0.097 | 0.430 | 0/3 vs 9% |
+| LiveCodeBench v5 | 20% (63/315) | **0.023** | 0.046 / 0.090 | 0.396 | 0/3 vs 8% |
+| AA-LCR | 20% (20/100) | 0.073 | 0.074 / 0.160 | 0.360 | 1/3 vs 12% |
+
+For coding, the headline is the go/no-go column: the coreset **never flipped the
+call** (0 of 3 held-out models, at every ratio I tried), while random sampling
+flips 8-15% of the time. On raw error, keeping 20% lands within ~2 points (about
+half random's), and 15% is on par with random's average but still never flips. The
+banned "keep the hardest" trick is off by 35-43 points - it only keeps questions
+everyone fails, so it says nothing about a good model.
 
 For long-context I'll be straight about it. The cheap signals barely predict
 accuracy here (the contexts are all long to begin with), and the LLM grader is
 noisy enough that even the full 100-question score wobbles by about 0.05. No method
-can beat that on the average, and mine doesn't pretend to: it matches random. What
-it does add is steadier worst-case error and a guarantee that the hard "counting"
-questions and the longest contexts actually show up. The practical takeaway: a
-borderline long-context call needs more like 30% of the set, or a cleaner grader
-(grade each answer a few times and take the majority).
+beats that on average, and mine doesn't pretend to - it matches random with a lower
+tail (p90). The go/no-go near a threshold is the weak spot: with only 100 questions
+and a noisy grader, one borderline model gets misjudged (by the coreset and, less
+consistently, by random). The honest takeaway: a borderline long-context call needs
+more like 30% of the set, or a cleaner grader (grade each answer a few times and
+take the majority). What the coreset still buys you here is coverage - the hard
+"counting" questions and the longest contexts are guaranteed to show up.
 
 ## Part B: testing the image encoder, not the brain
 

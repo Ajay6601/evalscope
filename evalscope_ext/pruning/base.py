@@ -20,8 +20,7 @@ except Exception:  # lets the numpy core be used without evalscope installed
 @dataclass
 class PruneResult:
     keep_indices: List[int]
-    bin_of: Dict[int, str] = field(default_factory=dict)        # kept index -> bin/role label
-    bin_weight: Dict[str, float] = field(default_factory=dict)  # bin -> share of full set
+    bin_of: Dict[int, str] = field(default_factory=dict)  # kept index -> bin/role label
     info: Dict[str, object] = field(default_factory=dict)
 
 
